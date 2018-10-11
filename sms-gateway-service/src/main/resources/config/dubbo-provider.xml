@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd" default-lazy-init="true">
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="${dubbo.server.name}" />
+
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
+
+	<dubbo:protocol name="dubbo" port="${dubbo.server.port}" dispatcher="message" threadpool="fixed" threads="300"/>
+	
+	<dubbo:provider delay="-1" timeout="${dubbo.provider.timeout}" retries="0"/>
+
+	<!-- 测试接口 -->
+	<dubbo:service interface="io.github.pleuvoir.api.TimeService" ref="timeService" version="${dubbo.server.version}"/>
+	
+
+</beans>
