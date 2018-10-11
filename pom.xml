@@ -33,6 +33,9 @@
 		<javassist.version>3.22.0-GA</javassist.version>
 		<netty3.version>3.10.6.Final</netty3.version>
 		<netty4.version>4.1.28.Final</netty4.version>
+		
+		<slf4j.version>1.7.25</slf4j.version>
+		<logback.version>1.2.3</logback.version>
 	</properties>
 
 	<dependencies>

@@ -9,10 +9,10 @@
 		http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
-		
-	<import resource="dev/context-dev.xml"/>
-	<import resource="test/context-test.xml"/>
-	<import resource="prod/context-prod.xml"/>
+	
+	<import resource="classpath:profile/dev/context-dev.xml" />
+	<import resource="classpath:profile/test/context-test.xml" />
+	<import resource="classpath:profile/prod/context-prod.xml" />
 	
 	<!-- 自动扫描 -->							
 	<context:component-scan base-package="io.github.pleuvoir.api,io.github.pleuvoir.service">
@@ -21,8 +21,5 @@
 	
 	<!-- dubbo-提供者 -->
 	<import resource="dubbo-provider.xml"/>
-	
-	<!-- dubbo-消费 -->
-	<!-- <import resource="dubbo-consumer.xml"/> -->
 	
 </beans>

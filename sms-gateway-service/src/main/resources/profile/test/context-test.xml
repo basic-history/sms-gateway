@@ -6,8 +6,8 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd"
-	profile="prod">
+	profile="test">
 	
-	<context:property-placeholder location="classpath:config/prod/dubbo-prod.properties" />
-	
+	<context:property-placeholder location="classpath:profile/test/dubbo-test.properties" />
+
 </beans>
