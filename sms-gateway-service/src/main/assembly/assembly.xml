@@ -1,0 +1,36 @@
+<assembly>
+    <id>bin</id>
+    <!-- Generates a zip package containing the needed files -->
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+
+    <!-- Adds dependencies to zip package under lib directory -->
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <unpack>false</unpack>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <!--  Adds startup scripts to the root directory of zip package -->
+        <fileSet>
+            <directory>bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <fileMode>0755</fileMode>
+            <includes>
+                <include>*.*</include>
+            </includes>
+        </fileSet>
+        
+        <fileSet>
+        	<directory>META-INF</directory>
+        	<outputDirectory>META-INF</outputDirectory>
+        	<includes>
+        		<include>*.*</include>
+        	</includes>
+        </fileSet>
+        
+    </fileSets>
+</assembly>
