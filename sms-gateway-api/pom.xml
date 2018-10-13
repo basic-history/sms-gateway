@@ -20,6 +20,7 @@
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>common-bom</artifactId>
 			<type>pom</type>
+			<optional>false</optional>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

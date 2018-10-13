@@ -20,7 +20,7 @@
 - 短信通道健康率检测，支持智能切换
 
 ## 技术
-spring、dubbo、zookeeprt、redis、mybatis-plus、akka
+spring、dubbo、zookeeper、redis、mybatis-plus、akka
 
 ## 开源协议
 [Apache License](LICENSE)

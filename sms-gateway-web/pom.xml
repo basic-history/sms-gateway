@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.github.pleuvoir</groupId>
+		<artifactId>sms-gateway-provider</artifactId>
+		<version>20181011</version>
+	</parent>
+	<artifactId>sms-gateway-web</artifactId>
+	<packaging>war</packaging>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>io.github.pleuvoir</groupId>
+			<artifactId>sms-gateway-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.pleuvoir</groupId>
+			<artifactId>sl4j-logback-bom</artifactId>
+			<type>pom</type>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.pleuvoir</groupId>
+			<artifactId>spring-mvc-bom</artifactId>
+			<type>pom</type>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.pleuvoir</groupId>
+			<artifactId>dubbo-zookeeper-bom</artifactId>
+			<type>pom</type>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- web -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>8.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jstl-impl</artifactId>
+			<version>1.2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.servlet</groupId>
+					<artifactId>servlet-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.servlet.jsp</groupId>
+					<artifactId>jsp-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20.1</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

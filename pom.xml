@@ -15,6 +15,7 @@
 		<module>bom</module>
 		<module>sms-gateway-api</module>
 		<module>sms-gateway-service</module>
+		<module>sms-gateway-web</module>
 	</modules>
 
 	<properties>

@@ -15,10 +15,10 @@
 
 	<modules>
 		<module>common-bom</module>
-		<module>spring-bom</module>
 		<module>redis-bom</module>
 		<module>dubbo-zookeeper-bom</module>
 		<module>sl4j-logback-bom</module>
+		<module>spring-mvc-bom</module>
 	</modules>
 
 
@@ -39,6 +39,12 @@
 		<netty4.version>4.1.28.Final</netty4.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<logback.version>1.2.3</logback.version>
+		<spring.version>5.0.8.RELEASE</spring.version>
+		<aspectj.version>1.8.13</aspectj.version>
+		<fileupload.version>1.3.3</fileupload.version>
+		<validator.version>6.0.5.Final</validator.version>
+		<javax.el.version>3.0.1-b04</javax.el.version>
+		<glassfish.javax.el.version>2.2.6</glassfish.javax.el.version>
 	</properties>
 
 	<dependencyManagement>
@@ -111,6 +117,38 @@
 				<artifactId>netty-all</artifactId>
 				<version>${netty4.version}</version>
 			</dependency>
+			<!-- spring related -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
 			<!-- common -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -126,6 +164,29 @@
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
 				<version>${commons-io.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${fileupload.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate.validator</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${validator.version}</version>
+			</dependency>
+			<!-- 需要HibernateValidator时 需提供此一下两个包 -->
+			<dependency>
+				<groupId>org.glassfish.web</groupId>
+				<artifactId>javax.el</artifactId>
+				<version>${glassfish.javax.el.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.el</groupId>
+				<artifactId>javax.el-api</artifactId>
+				<version>${javax.el.version}</version>
+				<scope>provided</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
