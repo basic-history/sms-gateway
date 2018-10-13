@@ -11,7 +11,6 @@ import io.github.pleuvoir.common.Bootstrap.Profile;
 
 /**
  * 启动器，第一个参数为启动环境，参考：{@link Profile}，若不设置参数按照默认的环境启动：{@link #DEFAULT_PROFILE}
- * @author pleuvoir
  *
  */
 public class Launcher {
