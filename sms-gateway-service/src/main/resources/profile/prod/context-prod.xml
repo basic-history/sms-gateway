@@ -10,4 +10,9 @@
 	
 	<context:property-placeholder location="classpath:profile/prod/dubbo-prod.properties" />
 	
+	<!-- plugins -->
+	<bean class="io.github.pleuvoir.RedisConfiguration">
+		<property name="location" value="profile/prod/redis-prod.properties" />
+	</bean>
+	
 </beans>

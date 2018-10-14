@@ -20,6 +20,12 @@
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>sms-gateway-api</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>io.github.pleuvoir</groupId>
+			<artifactId>redis-plugin</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
