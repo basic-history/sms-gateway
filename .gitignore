@@ -23,9 +23,9 @@
 hs_err_pid*
 
 # Eclipse Project Files
- 
 .classpath
 .project
 .settings
 target
 *.gz
+bom/bin/

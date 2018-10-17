@@ -4,14 +4,13 @@ package io.github.pleuvoir.model.vo;
 import io.github.pleuvoir.common.RspCode;
 
 
-public class ErrorResultMessageVO extends ResultMessageVO{
+public class ErrorResultMessageVO extends ResultMessageVO<Object> {
 
-	/**
-	 *@Fields 
-	 */
+
 	private static final long serialVersionUID = -2555372231794911241L;
 
-	public ErrorResultMessageVO() {}
+	public ErrorResultMessageVO() {
+	}
 
 	public ErrorResultMessageVO(RspCode rspCode, String msg) {
 		super(rspCode, msg);
@@ -20,5 +19,5 @@ public class ErrorResultMessageVO extends ResultMessageVO{
 	public ErrorResultMessageVO(String code, String msg) {
 		super(code, msg);
 	}
-	
+
 }

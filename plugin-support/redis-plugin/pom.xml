@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>io.github.pleuvoir</groupId>
-		<artifactId>sms-gateway-provider</artifactId>
+		<artifactId>plugin-support</artifactId>
 		<version>20181011</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
