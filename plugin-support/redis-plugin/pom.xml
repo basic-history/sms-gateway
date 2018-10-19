@@ -18,7 +18,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
-			<artifactId>redis-bom</artifactId>
+			<artifactId>spring-redis-bom</artifactId>
 			<type>pom</type>
 			<optional>false</optional>	<!-- 内部依赖可以传递 -->
 			<version>${project.version}</version>

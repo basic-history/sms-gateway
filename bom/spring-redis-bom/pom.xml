@@ -6,7 +6,7 @@
 		<artifactId>bom</artifactId>
 		<version>20181011</version>
 	</parent>
-	<artifactId>redis-bom</artifactId>
+	<artifactId>spring-redis-bom</artifactId>
 	<packaging>pom</packaging>
 
 	<dependencies>
