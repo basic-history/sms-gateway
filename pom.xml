@@ -22,17 +22,7 @@
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sms.gateway.version>20181011</sms.gateway.version>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-			<version>4.12</version>
-		</dependency>
-	</dependencies>
 
 
 	<dependencyManagement>

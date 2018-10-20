@@ -12,12 +12,13 @@
 
 	<artifactId>bom</artifactId>
 	<packaging>pom</packaging>
+	
 
 	<modules>
 		<module>common-bom</module>
 		<module>spring-redis-bom</module>
 		<module>dubbo-zookeeper-bom</module>
-		<module>sl4j-logback-bom</module>
+		<module>slf4j-logback-bom</module>
 		<module>spring-mvc-bom</module>
 	</modules>
 

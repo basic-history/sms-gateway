@@ -13,6 +13,7 @@
 
 	<modules>
 		<module>redis-plugin</module>
+		<module>dubbo-tracefilter-plugin</module>
 	</modules>
 
 </project>

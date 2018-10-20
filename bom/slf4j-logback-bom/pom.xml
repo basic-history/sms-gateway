@@ -6,7 +6,7 @@
 		<artifactId>bom</artifactId>
 		<version>20181011</version>
 	</parent>
-	<artifactId>sl4j-logback-bom</artifactId>
+	<artifactId>slf4j-logback-bom</artifactId>
 	<packaging>pom</packaging>
 
 	<dependencies>

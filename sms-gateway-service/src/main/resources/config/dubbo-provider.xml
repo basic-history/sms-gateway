@@ -15,7 +15,7 @@
 
 	<dubbo:protocol name="dubbo" port="${dubbo.server.port}" dispatcher="message" threadpool="fixed" threads="300"/>
 	
-	<dubbo:provider delay="-1" timeout="${dubbo.provider.timeout}" retries="0"/>
+	<dubbo:provider delay="-1" timeout="${dubbo.provider.timeout}" retries="0" filter="dubboTraceFilter"/>
 
 	<!-- 测试接口 -->
 	<dubbo:service interface="io.github.pleuvoir.api.TimeService" ref="timeService" version="${dubbo.server.version}"/>

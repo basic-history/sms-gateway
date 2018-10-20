@@ -66,5 +66,6 @@
 		<appender-ref ref="ERROR_FILE" />
 	</root>
 
+	<logger name="io.github.pleuvoir.DubboTraceFilter" level="DEBUG" />
 
 </configuration>

@@ -19,7 +19,7 @@
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
-			<artifactId>sl4j-logback-bom</artifactId>
+			<artifactId>slf4j-logback-bom</artifactId>
 			<type>pom</type>
 			<version>${project.version}</version>
 		</dependency>
@@ -98,6 +98,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		
+		<finalName>sms-gateway-web</finalName>  
 	</build>
 
 </project>
