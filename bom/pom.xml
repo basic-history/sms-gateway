@@ -54,7 +54,7 @@
 		<reactor.core.version>3.1.8.RELEASE</reactor.core.version>
 		<reactor.net.version>2.0.8.RELEASE</reactor.net.version>
 		<reactor.netty.version>0.7.8.RELEASE</reactor.netty.version>
-		<rabbitmq.ampq.version>5.3.0</rabbitmq.ampq.version>
+		<rabbitmq.ampq.version>5.4.0</rabbitmq.ampq.version>
 		<rabbitmq.http.version>2.1.0.RELEASE</rabbitmq.http.version>
 	</properties>
 
