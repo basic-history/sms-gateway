@@ -14,6 +14,7 @@
 	<modules>
 		<module>redis-plugin</module>
 		<module>dubbo-tracefilter-plugin</module>
+		<module>freemaker-plugin</module>
 	</modules>
 
 </project>

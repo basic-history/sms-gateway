@@ -14,7 +14,7 @@
 </dependency>
 ```
 
-### 配置  ###
+### 配置
 
 dubbo 服务提供配置文件需要增加 `filter="dubboTraceFilter"`
 

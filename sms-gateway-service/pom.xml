@@ -14,19 +14,32 @@
 	<artifactId>sms-gateway-service</artifactId>
 	<name>sms-gateway-service</name>
 
+	<properties>
+		<spring.version>5.0.8.RELEASE</spring.version>
+		<junit.version>4.12</junit.version>
+	</properties>
+
 
 	<dependencies>
+
+		<!-- 保证 spring-test 和 spring-context 版本兼容，否则无法跑单元测试 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>sms-gateway-api</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>redis-plugin</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>dubbo-tracefilter-plugin</artifactId>
@@ -47,6 +60,20 @@
 			<type>pom</type>
 			<optional>true</optional>
 			<version>${project.version}</version>
+		</dependency>
+
+		<!-- test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -71,8 +98,8 @@
 				</executions>
 			</plugin>
 		</plugins>
-		
-		<finalName>sms-gateway-service</finalName>  
+
+		<finalName>sms-gateway-service</finalName>
 	</build>
-	
+
 </project>

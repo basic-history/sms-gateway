@@ -12,7 +12,7 @@
 
 	<artifactId>bom</artifactId>
 	<packaging>pom</packaging>
-	
+
 
 	<modules>
 		<module>common-bom</module>
@@ -20,6 +20,7 @@
 		<module>dubbo-zookeeper-bom</module>
 		<module>slf4j-logback-bom</module>
 		<module>spring-mvc-bom</module>
+		<module>spring-rabbitmq-bom</module>
 	</modules>
 
 
@@ -48,6 +49,13 @@
 		<validator.version>6.0.5.Final</validator.version>
 		<javax.el.version>3.0.1-b04</javax.el.version>
 		<glassfish.javax.el.version>2.2.6</glassfish.javax.el.version>
+		<!-- rabbitmq -->
+		<spring.rabbit.version>2.0.5.RELEASE</spring.rabbit.version>
+		<reactor.core.version>3.1.8.RELEASE</reactor.core.version>
+		<reactor.net.version>2.0.8.RELEASE</reactor.net.version>
+		<reactor.netty.version>0.7.8.RELEASE</reactor.netty.version>
+		<rabbitmq.ampq.version>5.3.0</rabbitmq.ampq.version>
+		<rabbitmq.http.version>2.1.0.RELEASE</rabbitmq.http.version>
 	</properties>
 
 	<dependencyManagement>
@@ -77,6 +85,14 @@
 					<exclusion>
 						<groupId>org.jboss.netty</groupId>
 						<artifactId>netty</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-context</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
@@ -201,6 +217,37 @@
 				<artifactId>javax.el-api</artifactId>
 				<version>${javax.el.version}</version>
 				<scope>provided</scope>
+			</dependency>
+			<!-- RabbitMQ -->
+			<dependency>
+				<groupId>org.springframework.amqp</groupId>
+				<artifactId>spring-rabbit</artifactId>
+				<version>${spring.rabbit.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.rabbitmq</groupId>
+				<artifactId>amqp-client</artifactId>
+				<version>${rabbitmq.ampq.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.rabbitmq</groupId>
+				<artifactId>http-client</artifactId>
+				<version>${rabbitmq.http.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.projectreactor</groupId>
+				<artifactId>reactor-core</artifactId>
+				<version>${reactor.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.projectreactor</groupId>
+				<artifactId>reactor-net</artifactId>
+				<version>${reactor.net.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.projectreactor.ipc</groupId>
+				<artifactId>reactor-netty</artifactId>
+				<version>${reactor.netty.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
