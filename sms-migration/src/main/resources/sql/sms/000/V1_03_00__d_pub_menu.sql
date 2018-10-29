@@ -1,0 +1,15 @@
+INSERT INTO PUB_MENU VALUES ('U000', 'Y', null, '0', null, null, '0', '运管顶级菜单', '1', null);
+INSERT INTO PUB_MENU VALUES ('U001', 'Y', null, '1', 'U000', null, '7', '系统管理', '1', null);
+INSERT INTO PUB_MENU VALUES ('U002', 'N', null, '2', 'U001', '/param/list', '0', '参数管理', '1', null);
+INSERT INTO PUB_MENU VALUES ('U003', 'N', null, '2', 'U001', '/role/list', '1', '角色管理', '1', null);
+INSERT INTO PUB_MENU VALUES ('U004', 'N', null, '2', 'U001', '/user/list', '2', '用户管理', '1', null);
+INSERT INTO PUB_MENU VALUES ('U005', 'N', null, '2', 'U001', '/menu/list', '3', '菜单管理', '1', null);
+INSERT INTO PUB_MENU VALUES ('U007', 'N', null, '2', 'U001', '/loginLog/list', '4', '登录日志', '1', null);
+INSERT INTO PUB_MENU VALUES ('U008', 'N', null, '2', 'U001', '/operationLog/list', '5', '操作日志', '1', null);
+INSERT INTO PUB_MENU VALUES ('U10101', 'N', null, '1', 'U000', '/smsChannel/list', '0', '短信通道', '1', null);
+INSERT INTO PUB_MENU VALUES ('U10181', 'N', null, '1', 'U000', '/businessConfiguration/list', '5', '业务配置', '1', null);
+INSERT INTO PUB_MENU VALUES ('U10105', 'N', null, '1', 'U000', '/smsApplication/list', '1', '短信应用', '1', null);
+INSERT INTO PUB_MENU VALUES ('U10107', 'N', null, '1', 'U000', '/signatureManagement/list', '2', '签名管理', '1', null);
+INSERT INTO PUB_MENU VALUES ('U10141', 'N', null, '1', 'U000', '/templateManagement/list', '3', '模板管理', '1', null);
+INSERT INTO PUB_MENU VALUES ('U10142', 'N', null, '1', 'U000', '/smsService/list', '4', '短信业务', '1', null);
+INSERT INTO PUB_MENU VALUES ('U10161', 'N', null, '1', 'U000', '/smsRecord/list', '6', '短信记录', '1', null);

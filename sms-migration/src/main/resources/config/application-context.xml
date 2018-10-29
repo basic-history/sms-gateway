@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+	<import resource="dev/context-dev.xml"/>
+	<import resource="test/context-test.xml"/>
+	<import resource="prod/context-prod.xml"/>
+	
+	<bean id="flyway" class="org.flywaydb.core.Flyway">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="placeholderPrefix" value="${flyway.placeholder.prefix}"/>
+		<property name="placeholderSuffix" value="${flyway.placeholder.suffix}"/>
+		<property name="placeholderReplacement" value="${flyway.placeholder.replacement}"/>
+		<property name="sqlMigrationPrefix" value="${flyway.sql.migration.prefix}"/>
+		<property name="sqlMigrationSeparator" value="${flyway.sql.migration.separator}"/>
+		<property name="sqlMigrationSuffix" value="${flyway.sql.migration.suffix}"/>
+		<property name="table" value="${flyway.table}"/>
+		<property name="locations" value="${sql.location}"/>
+	</bean>
+	
+	<bean id="instructions" class="io.github.pleuvoir.migration.Instructions">
+		<property name="flyway" ref="flyway"/>
+	</bean>
+	
+</beans>
