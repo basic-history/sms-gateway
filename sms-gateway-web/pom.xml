@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>io.github.pleuvoir</groupId>
 		<artifactId>sms-gateway-provider</artifactId>
-		<version>20181011</version>
+		<version>1.0.2</version>
 	</parent>
 	<artifactId>sms-gateway-web</artifactId>
 	<packaging>war</packaging>
