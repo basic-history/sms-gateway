@@ -37,7 +37,7 @@
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>redis-plugin</artifactId>
-			<version>${project.version}</version>
+			<version>1.0.3</version>
 		</dependency>
 
 		<dependency>
