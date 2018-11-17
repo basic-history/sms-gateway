@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import io.github.pleuvoir.api.TimeService;
 import io.github.pleuvoir.model.dto.SendVerifyCodeDTO;
 import io.github.pleuvoir.model.vo.ResultMessageVO;
+import io.github.pleuvoir.rabbit.model.NormalMessage;
+import io.github.pleuvoir.rabbit.producer.NormalMessageProducer;
 
 @RestController
 @RequestMapping("/datetime")
@@ -22,6 +24,9 @@ public class TestController extends BaseController {
 	@Autowired
 	private TimeService timeService;
 
+	@Autowired
+	private NormalMessageProducer mormalMessageProducer;
+
 	@GetMapping("/now")
 	public ResultMessageVO<String> time(@Validated SendVerifyCodeDTO dto, BindingResult br) {
 		if (br.hasErrors()) {
@@ -31,6 +36,18 @@ public class TestController extends BaseController {
 		String now = timeService.now();
 		logger.info("当前时间：{}", now);
 		vo.setData(now);
+		return vo;
+	}
+
+	@GetMapping("/mq")
+	public ResultMessageVO<String> mq(String id) {
+		ResultMessageVO<String> vo = ResultMessageVO.success();
+
+		NormalMessage mqMessage = new NormalMessage();
+		mqMessage.setId(id);
+		mormalMessageProducer.send(mqMessage);
+
+		vo.setData(mqMessage.toJSON());
 		return vo;
 	}
 

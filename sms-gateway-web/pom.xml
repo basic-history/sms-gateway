@@ -19,6 +19,12 @@
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
+			<artifactId>rabbitmq-plugin</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>slf4j-logback-bom</artifactId>
 			<type>pom</type>
 			<version>${project.version}</version>
@@ -98,8 +104,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		
-		<finalName>sms-gateway-web</finalName>  
+
+		<finalName>sms-gateway-web</finalName>
 	</build>
 
 </project>

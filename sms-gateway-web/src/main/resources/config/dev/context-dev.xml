@@ -12,5 +12,8 @@
 	
 	<context:property-placeholder location="classpath:config/dev/dubbo-dev.properties" />
 	
+	<bean class="io.github.pleuvoir.rabbit.RabbitMQConfiguration">
+		<property name="location" value="config/dev/rabbitmq-dev.properties" />
+	</bean>
 	
 </beans>
