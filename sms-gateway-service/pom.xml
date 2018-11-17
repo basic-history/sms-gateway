@@ -36,15 +36,16 @@
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
-			<artifactId>redis-plugin</artifactId>
-			<version>1.0.3</version>
+			<artifactId>rabbitmq-plugin</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
-			<artifactId>dubbo-tracefilter-plugin</artifactId>
-			<version>${project.version}</version>
+			<artifactId>redis-plugin</artifactId>
+			<version>1.0.7</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>

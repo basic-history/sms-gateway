@@ -8,11 +8,11 @@
 		http://www.springframework.org/schema/context/spring-context.xsd"
 	profile="prod">
 	
-	<context:property-placeholder location="classpath:profile/prod/dubbo-prod.properties" />
+	<context:property-placeholder location="classpath:config/profiles/prod/dubbo-prod.properties" />
 	
 	<!-- plugins -->
-	<bean class="io.github.pleuvoir.RedisConfiguration">
-		<property name="location" value="profile/prod/redis-prod.properties" />
+	<bean class="io.github.pleuvoir.redis.config.LettuceRedisConfiguration">
+		<property name="location" value="config/profiles/prod/redis-prod.properties" />
 	</bean>
 	
 </beans>

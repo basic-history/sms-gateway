@@ -5,8 +5,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import io.github.pleuvoir.common.Bootstrap;
-import io.github.pleuvoir.common.Bootstrap.Profile;
+import io.github.pleuvoir.util.Bootstrap;
+import io.github.pleuvoir.util.Bootstrap.Profile;
 
 
 /**
