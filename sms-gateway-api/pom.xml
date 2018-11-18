@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>io.github.pleuvoir</groupId>
 		<artifactId>sms-gateway-provider</artifactId>
-		<version>1.0.2</version>
+		<version>1.0.3</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -21,7 +21,7 @@
 			<artifactId>common-bom</artifactId>
 			<type>pom</type>
 			<optional>false</optional>
-			<version>${project.version}</version>
+			<version>${my.bom.version}</version>
 		</dependency>
 	</dependencies>
 

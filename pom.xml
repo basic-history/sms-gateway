@@ -5,7 +5,7 @@
 
 	<groupId>io.github.pleuvoir</groupId>
 	<artifactId>sms-gateway-provider</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>pom</packaging>
 
 	<name>${project.artifactId}</name>
@@ -20,6 +20,7 @@
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<my.bom.version>1.1.0</my.bom.version>
 	</properties>
 
 

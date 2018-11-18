@@ -4,11 +4,10 @@
 	<parent>
 		<groupId>io.github.pleuvoir</groupId>
 		<artifactId>sms-gateway-provider</artifactId>
-		<version>1.0.2</version>
+		<version>1.0.3</version>
 	</parent>
 	<artifactId>sms-gateway-web</artifactId>
 	<packaging>war</packaging>
-
 
 	<dependencies>
 
@@ -27,21 +26,21 @@
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>slf4j-logback-bom</artifactId>
 			<type>pom</type>
-			<version>${project.version}</version>
+			<version>${my.bom.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>spring-mvc-bom</artifactId>
 			<type>pom</type>
-			<version>${project.version}</version>
+			<version>${my.bom.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>dubbo-zookeeper-bom</artifactId>
 			<type>pom</type>
-			<version>${project.version}</version>
+			<version>${my.bom.version}</version>
 		</dependency>
 
 		<!-- web -->
