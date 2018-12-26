@@ -16,11 +16,11 @@
 - 支持 RPC、MQ 和 HTTP 调用
 - 短信通道接入分离
 - 数据库迁移工具
-- 后台管理项目（基于 VUE）
+- 后台管理项目
 - 短信通道健康率检测，支持智能切换
 
 ## 技术
-spring、dubbo、zookeeper、redis、mybatis-plus、akka
+springmvc、spring、dubbo、zookeeper、redis、mybatis-plus、akka、rabbitmq
 
 ## 开源协议
 [Apache License](LICENSE)
