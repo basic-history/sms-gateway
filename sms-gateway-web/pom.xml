@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>io.github.pleuvoir</groupId>
-		<artifactId>sms-gateway-provider</artifactId>
+		<artifactId>sms-gateway-parent</artifactId>
 		<version>1.0.3</version>
 	</parent>
 	<artifactId>sms-gateway-web</artifactId>
