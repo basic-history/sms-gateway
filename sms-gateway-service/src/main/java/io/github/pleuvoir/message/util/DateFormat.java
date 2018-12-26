@@ -1,4 +1,4 @@
-package io.github.pleuvoir.util;
+package io.github.pleuvoir.message.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

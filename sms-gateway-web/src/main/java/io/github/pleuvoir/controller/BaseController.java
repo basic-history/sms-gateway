@@ -4,8 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 
-import io.github.pleuvoir.common.RspCode;
-import io.github.pleuvoir.model.vo.ResultMessageVO;
+import io.github.pleuvoir.message.common.RspCode;
+import io.github.pleuvoir.message.model.vo.ResultMessageVO;
 
 public class BaseController {
 

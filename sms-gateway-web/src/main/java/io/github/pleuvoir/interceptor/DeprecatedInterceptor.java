@@ -12,8 +12,8 @@ import org.springframework.http.MediaType;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import io.github.pleuvoir.common.RspCode;
-import io.github.pleuvoir.model.vo.ResultMessageVO;
+import io.github.pleuvoir.message.common.RspCode;
+import io.github.pleuvoir.message.model.vo.ResultMessageVO;
 
 /**
  * 废弃接口拦截器<br/>

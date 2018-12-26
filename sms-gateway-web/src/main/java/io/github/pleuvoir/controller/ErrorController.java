@@ -3,8 +3,8 @@ package io.github.pleuvoir.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.pleuvoir.common.RspCode;
-import io.github.pleuvoir.model.vo.ErrorResultMessageVO;
+import io.github.pleuvoir.message.common.RspCode;
+import io.github.pleuvoir.message.model.vo.ErrorResultMessageVO;
 
 
 @RestController

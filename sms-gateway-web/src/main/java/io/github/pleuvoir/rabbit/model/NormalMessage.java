@@ -1,6 +1,6 @@
 package io.github.pleuvoir.rabbit.model;
 
-import io.github.pleuvoir.common.ToJSON;
+import io.github.pleuvoir.message.common.ToJSON;
 
 public class NormalMessage implements ToJSON {
 

@@ -14,16 +14,45 @@
 	<artifactId>sms-gateway-api</artifactId>
 	<name>sms-gateway-api</name>
 
-
 	<dependencies>
 		<dependency>
-			<groupId>io.github.pleuvoir</groupId>
-			<artifactId>common-bom</artifactId>
-			<type>pom</type>
-			<optional>false</optional>
-			<version>${my.bom.version}</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${lang3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${fileupload.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.validator}</version>
+		</dependency>
+		<!-- 需要HibernateValidator时 需提供此一下两个包 -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>javax.el</artifactId>
+			<version>${javax.el.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>${javax.el.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
 
 </project>

@@ -2,7 +2,7 @@ package io.github.pleuvoir.rabbit.model;
 
 import java.time.LocalDateTime;
 
-import io.github.pleuvoir.common.ToJSON;
+import io.github.pleuvoir.message.common.ToJSON;
 
 public class DelayMessage implements ToJSON {
 

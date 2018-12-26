@@ -1,10 +1,10 @@
-package io.github.pleuvoir.model.dto;
+package io.github.pleuvoir.message.model.dto;
 
 import java.io.Serializable;
 
-import javax.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotBlank;
 
-import io.github.pleuvoir.common.ToJSON;
+import io.github.pleuvoir.message.common.ToJSON;
 
 /**
  * 发送验证码

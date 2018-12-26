@@ -1,4 +1,4 @@
-package io.github.pleuvoir.util;
+package io.github.pleuvoir.message.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

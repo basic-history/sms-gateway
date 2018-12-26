@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
-import io.github.pleuvoir.common.ToJSON;
+import io.github.pleuvoir.message.common.ToJSON;
 import io.github.pleuvoir.rabbit.support.producer.MQMessage;
 
 /**

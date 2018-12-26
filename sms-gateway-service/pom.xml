@@ -17,6 +17,8 @@
 	<properties>
 		<spring.version>5.0.8.RELEASE</spring.version>
 		<junit.version>4.12</junit.version>
+		<validator.version>6.0.5.Final</validator.version>
+		<javax.el.version>2.2.4</javax.el.version>
 	</properties>
 
 
@@ -46,6 +48,19 @@
 			<version>1.0.7</version>
 		</dependency>
 
+		<!-- 需要HibernateValidator时 需提供此一下两个包 -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>javax.el</artifactId>
+			<version>${javax.el.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>${javax.el.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>

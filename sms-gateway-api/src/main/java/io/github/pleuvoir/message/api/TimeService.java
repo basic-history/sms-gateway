@@ -1,4 +1,4 @@
-package io.github.pleuvoir.api;
+package io.github.pleuvoir.message.api;
 
 public interface TimeService {
 

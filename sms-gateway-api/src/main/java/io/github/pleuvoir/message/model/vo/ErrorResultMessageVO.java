@@ -1,7 +1,7 @@
-package io.github.pleuvoir.model.vo;
+package io.github.pleuvoir.message.model.vo;
 
 
-import io.github.pleuvoir.common.RspCode;
+import io.github.pleuvoir.message.common.RspCode;
 
 
 public class ErrorResultMessageVO extends ResultMessageVO<Object> {

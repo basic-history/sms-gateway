@@ -15,7 +15,10 @@
 	<dubbo:consumer check="false"  />
 
 	<!-- 测试接口 -->
-	<dubbo:reference id="timeService" interface="io.github.pleuvoir.api.TimeService" version="${core.version}"/>
+	<dubbo:reference id="timeService" interface="io.github.pleuvoir.message.api.TimeService" version="${core.version}"/>
+	
+	<!-- 短信接口 -->
+	<dubbo:reference id="smsService" interface="io.github.pleuvoir.message.api.SmsService" version="${core.version}"/>
  	
 	
 </beans>

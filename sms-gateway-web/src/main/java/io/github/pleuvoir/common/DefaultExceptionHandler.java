@@ -16,7 +16,7 @@ import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
 import com.alibaba.fastjson.support.spring.FastJsonJsonView;
 
-import io.github.pleuvoir.common.RspCode;
+import io.github.pleuvoir.message.common.RspCode;
 
 /**
  * 提供通用的异常处理，包括打印异常、输出统一的错误信息

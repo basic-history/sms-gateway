@@ -1,12 +1,12 @@
-package io.github.pleuvoir;
+package io.github.pleuvoir.message;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import io.github.pleuvoir.util.Bootstrap;
-import io.github.pleuvoir.util.Bootstrap.Profile;
+import io.github.pleuvoir.message.util.Bootstrap;
+import io.github.pleuvoir.message.util.Bootstrap.Profile;
 
 
 /**

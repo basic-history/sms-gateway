@@ -1,4 +1,4 @@
-package io.github.pleuvoir.common;
+package io.github.pleuvoir.message.common;
 
 import com.alibaba.fastjson.JSON;
 

@@ -1,9 +1,9 @@
-package io.github.pleuvoir.model.vo;
+package io.github.pleuvoir.message.model.vo;
 
 import java.io.Serializable;
 
-import io.github.pleuvoir.common.RspCode;
-import io.github.pleuvoir.common.ToJSON;
+import io.github.pleuvoir.message.common.RspCode;
+import io.github.pleuvoir.message.common.ToJSON;
 
 public class ResultMessageVO<T> implements Serializable, ToJSON {
 	
