@@ -1,20 +1,19 @@
-package io.github.pleuvoir.common.util;
+package io.github.pleuvoir.common.util.validator;
 
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.util.CollectionUtils;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-
-import io.github.pleuvoir.common.ValidationResult;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.groups.Default;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.CollectionUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 
 
 public class HibernateValidatorUtils {
@@ -57,7 +56,7 @@ public class HibernateValidatorUtils {
 	}
 	
 	public String getRandomFieldError() {
-		return this.bindingResult.getFieldError().getField() + ":" + this.bindingResult.getFieldError().getDefaultMessage();
+		return this.bindingResult.getFieldError().getField() + this.bindingResult.getFieldError().getDefaultMessage();
 	}
 	
 	/**

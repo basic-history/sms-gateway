@@ -1,4 +1,4 @@
-package io.github.pleuvoir.common;
+package io.github.pleuvoir.common.util.validator;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -8,9 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class ValidationResult implements Serializable {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 4062728936709602880L;
 
 	//校验结果是否有错
