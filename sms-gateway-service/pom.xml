@@ -19,6 +19,9 @@
 		<junit.version>4.12</junit.version>
 		<validator.version>6.0.5.Final</validator.version>
 		<javax.el.version>2.2.4</javax.el.version>
+		<mybatis-plus.version>2.3.1</mybatis-plus.version>
+		<druid.version>1.1.10</druid.version>
+		<ojdbc.version>1.0</ojdbc.version>
 	</properties>
 
 
@@ -28,6 +31,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 
@@ -76,6 +85,23 @@
 			<type>pom</type>
 			<optional>true</optional>
 			<version>${my.bom.version}</version>
+		</dependency>
+
+		<!-- database -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>oracle</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>${ojdbc.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
 		</dependency>
 
 		<!-- test -->

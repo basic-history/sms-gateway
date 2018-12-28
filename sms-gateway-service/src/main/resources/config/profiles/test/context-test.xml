@@ -8,8 +8,33 @@
 		http://www.springframework.org/schema/context/spring-context.xsd"
 	profile="test">
 	
-	<context:property-placeholder location="classpath:config/profiles/test/dubbo-test.properties" />
+	<context:property-placeholder location="classpath:config/profiles/test/dubbo-test.properties,
+											classpath:config/profiles/test/database-test.properties" />
 
+
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+        <property name="initialSize" value="${db.init.size}"/>
+        <property name="maxActive" value="${db.max.active}"/>
+        <property name="minIdle" value="${db.min.idle}"/>
+        <property name="maxWait" value="${db.max.wait}"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="validationQuery" value="${db.validation.query}"/>
+        <property name="validationQueryTimeout" value="1"/>
+        <property name="timeBetweenEvictionRunsMillis" value="120000"/>
+        <property name="numTestsPerEvictionRun" value="${db.max.active}"/>
+        <property name="filters" value="stat"/>
+        <property name="removeAbandoned" value="true"></property>
+        <property name="removeAbandonedTimeout" value="300"></property>
+        <property name="logAbandoned" value="true"></property>
+	</bean>
+	
+	
 	<!-- plugins -->
 	<bean class="io.github.pleuvoir.redis.config.LettuceRedisConfiguration">
 		<property name="location" value="config/profiles/test/redis-test.properties" />

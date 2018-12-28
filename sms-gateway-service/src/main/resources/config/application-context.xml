@@ -19,6 +19,44 @@
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	
+	<!-- Mybatis plus -->
+	<bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="plugins">
+	        <array>
+	            <!-- 分页插件配置 -->
+	            <bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor"/>
+	            <!-- 乐观锁插件 -->    
+	            <bean class="com.baomidou.mybatisplus.plugins.OptimisticLockerInterceptor"/>
+	        </array>
+	    </property>
+	    <property name="configLocation" value="classpath:config/mapping-config.xml"/>
+		<property name="mapperLocations">
+			<array>
+				<value>classpath:io/github/pleuvoir/message/dao/mapper/**/*Mapper.xml</value>
+			</array>
+		</property>
+		<!-- 定义全局策略 -->
+		<property name="globalConfig">
+			<bean class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
+				<property name="idType" value="3"/>
+				<property name="dbType" value="oracle" />
+				<property name="dbColumnUnderline" value="true" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+		<property name="basePackage" value="io.github.pleuvoir.message.dao"/>
+	</bean>
+	
+	<!-- 配置事物管理器 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<constructor-arg ref="dataSource"/>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
 	<!-- dubbo-提供者 -->
 	<import resource="dubbo-provider.xml"/>
 	
