@@ -7,12 +7,14 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.NotBlank;
 
 import io.github.pleuvoir.message.common.ToJSON;
+import lombok.Data;
 
 
 /**
  * 短信验证码 DTO
  *
  */
+@Data
 public class SmsCodeDTO implements Serializable, ToJSON {
 
 	private static final long serialVersionUID = 240690879220466336L;
@@ -32,27 +34,5 @@ public class SmsCodeDTO implements Serializable, ToJSON {
 	public static String VER_CODE_LOGIN = "001";
 
 
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public String getVerCode() {
-		return verCode;
-	}
-
-	public void setVerCode(String verCode) {
-		this.verCode = verCode;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
+	
 }

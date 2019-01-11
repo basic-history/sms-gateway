@@ -1,8 +1,7 @@
 package io.github.pleuvoir.message.exception;
 
 /**
- * 短信验证码异常
- *
+ * 短信异常
  */
 public class SmsException extends Exception {
 

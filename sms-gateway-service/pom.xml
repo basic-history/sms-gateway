@@ -26,7 +26,6 @@
 
 
 	<dependencies>
-
 		<!-- 保证 spring-test 和 spring-context 版本兼容，否则无法跑单元测试 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
