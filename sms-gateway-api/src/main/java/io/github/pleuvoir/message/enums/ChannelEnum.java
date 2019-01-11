@@ -27,10 +27,14 @@ public enum ChannelEnum {
 		this.name = name;
 	}
 
-	
+	/**
+	 * 通过名称获取编码，忽略大小写，剔除空格
+	 * @param name	通道名称
+	 * @return	通道编码
+	 */
 	public static String getCodeByName(String name) {
 		for (ChannelEnum channel : ChannelEnum.values()) {
-			if (channel.getName().equals(name)) {
+			if (channel.getName().equals(StringUtils.trim(name).toLowerCase())) {
 				return channel.getCode();
 			}
 		}
