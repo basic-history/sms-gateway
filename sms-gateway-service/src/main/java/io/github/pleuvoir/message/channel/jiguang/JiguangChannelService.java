@@ -1,5 +1,7 @@
-package io.github.pleuvoir.message.channel;
+package io.github.pleuvoir.message.channel.jiguang;
 
+import io.github.pleuvoir.message.channel.ChannelService;
+import io.github.pleuvoir.message.channel.ServiceChannel;
 import io.github.pleuvoir.message.enums.ChannelEnum;
 import io.github.pleuvoir.message.model.dto.ChannelResultDTO;
 import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;

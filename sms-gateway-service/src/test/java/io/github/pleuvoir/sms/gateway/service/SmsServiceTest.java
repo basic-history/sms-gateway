@@ -15,7 +15,7 @@ public class SmsServiceTest extends BaseTest {
 	@Test
 	public void test() {
 		SmsCodeDTO smsCodeDTO = new SmsCodeDTO();
-		smsCodeDTO.setPhone("1860927xxxx");
+		smsCodeDTO.setPhone("18609279999");
 		smsCodeDTO.setCode("2580");
 		smsCodeDTO.setVerCode("123");
 		try {
