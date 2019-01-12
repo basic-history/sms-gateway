@@ -38,6 +38,18 @@ public enum ChannelEnum {
 				return channel.getCode();
 			}
 		}
-		return StringUtils.EMPTY;
+		return null;
+	}
+	
+	/**
+	 * 通过通道编码获取枚举
+	 */
+	public static ChannelEnum toEnum(String code) {
+		for(ChannelEnum p : ChannelEnum.values()) {
+			if(StringUtils.equals(code, p.getCode())) {
+				return p;
+			}
+		}
+		return null;
 	}
 }

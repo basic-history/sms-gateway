@@ -14,34 +14,39 @@ import org.springframework.stereotype.Service;
 
 import io.github.pleuvoir.message.channel.ChannelService;
 import io.github.pleuvoir.message.channel.ServiceChannel;
+import io.github.pleuvoir.message.enums.ChannelEnum;
+import io.github.pleuvoir.message.exception.ChannelException;
 
 @Service
 public class SimpleChannelServiceFatory implements ChannelServiceFactory, InitializingBean {
 
 	private static Logger logger = LoggerFactory.getLogger(SimpleChannelServiceFatory.class);
 	
-	private final Map<String, ChannelService> channelServiceCache = new ConcurrentHashMap<>(12);
+	private final Map<ChannelEnum, ChannelService> channelServiceCache = new ConcurrentHashMap<>(12);
 
 	@Autowired
 	private ApplicationContext applicationContext;
 
 	@Override
-	public ChannelService getChannelService(String channelCode) {
-		logger.info("获取短信通道，通道编号：{}", channelCode);
-		return this.channelServiceCache.get(channelCode);
+	public ChannelService getChannelService(String channelCode) throws ChannelException {
+		ChannelEnum channelEnum = ChannelEnum.toEnum(channelCode);
+		if (channelEnum == null) {
+			logger.warn("获取短信通道失败，编号：{}", channelCode);
+			throw new ChannelException("暂无可用的短信通道");
+		}
+		logger.info("成功获取短信通道，通道编号：{}", channelCode);
+		return this.channelServiceCache.get(channelEnum);
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		
 		Collection<ChannelService> channelServices = applicationContext.getBeansOfType(ChannelService.class, false, false).values();
 		
 		channelServices.forEach(channelService -> {
-
 			Class<? extends ChannelService> clazz = channelService.getClass();
 			if (clazz.isAnnotationPresent(ServiceChannel.class)) {
 				ServiceChannel serviceChannel = clazz.getAnnotation(ServiceChannel.class);
-				this.channelServiceCache.put(serviceChannel.value().getCode(), channelService);
+				this.channelServiceCache.put(serviceChannel.value(), channelService);
 
 				if (logger.isDebugEnabled()) {
 					logger.debug("初始化短信通道，{} -> {}", serviceChannel.value().getCode(),
@@ -50,7 +55,7 @@ public class SimpleChannelServiceFatory implements ChannelServiceFactory, Initia
 			}
 		});
 		
-		logger.info("短信通道工厂初始化完成，目前可用通道编号：{}", Arrays.asList(this.channelServiceCache.keySet().toArray()));
+		logger.info("短信通道工厂初始化完成，目前已实现通道：{}", Arrays.asList(this.channelServiceCache.keySet().toArray()));
 	}
 
 }

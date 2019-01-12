@@ -24,6 +24,7 @@
 		<logback.version>1.1.7</logback.version>
 
 		<junit.version>4.12</junit.version>
+		<mysql.version>5.1.18</mysql.version>
 	</properties>
 
 	<dependencies>
@@ -33,22 +34,25 @@
 			<artifactId>flyway-core</artifactId>
 			<version>${flyway.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 
-	<!-- 	<dependency>
-			<groupId>oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>${ojdbc.version}</version>
-		</dependency> -->
+
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
+		</dependency>
+
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
 
 		<dependency>
@@ -128,7 +132,7 @@
 					</execution>
 				</executions>
 			</plugin>
-	        
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -155,7 +159,7 @@
 				<version>3.0.0</version>
 			</plugin>
 		</plugins>
-		<finalName>sms-migration</finalName>  
+		<finalName>sms-migration</finalName>
 	</build>
 
 </project>

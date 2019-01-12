@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import io.github.pleuvoir.message.api.SmsService;
 import io.github.pleuvoir.message.channel.ChannelService;
 import io.github.pleuvoir.message.enums.ChannelEnum;
+import io.github.pleuvoir.message.exception.ChannelException;
 import io.github.pleuvoir.message.exception.SmsException;
 import io.github.pleuvoir.message.factory.ChannelServiceFactory;
 import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;
@@ -38,14 +39,20 @@ public class DefaultSmsService implements SmsService {
 		}
 
 		// from db
-		String channelCode = ChannelEnum.JIGUANG.getCode();
+		//String channelCode = ChannelEnum.JIGUANG.getCode();
+		String channelCode = "1";
 
-		ChannelService channelService = channelServiceFactory.getChannelService(channelCode);
-		
-		
+		ChannelService channelService = null;
+		try {
+			channelService = channelServiceFactory.getChannelService(channelCode);
+		} catch (ChannelException e) {
+
+			logger.error("渠道工厂异常：{}", e.getMessage());
+		}
+
 		ChannelSmsMsgDTO channelSmsMsgDTO = new ChannelSmsMsgDTO();
 		
-		channelService.sendSmsCode(channelSmsMsgDTO);
+	//	channelService.sendSmsCode(channelSmsMsgDTO);
 		return null;
 	}
 
