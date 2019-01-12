@@ -40,7 +40,7 @@
 		<property name="globalConfig">
 			<bean class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
 				<property name="idType" value="3"/>
-				<property name="dbType" value="oracle" />
+				<property name="dbType" value="mysql" />
 				<property name="dbColumnUnderline" value="true" />
 			</bean>
 		</property>

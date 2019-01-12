@@ -21,7 +21,7 @@
 		<javax.el.version>2.2.4</javax.el.version>
 		<mybatis-plus.version>2.3.1</mybatis-plus.version>
 		<druid.version>1.1.10</druid.version>
-		<ojdbc.version>1.0</ojdbc.version>
+		<mysql.version>5.1.18</mysql.version>
 	</properties>
 
 
@@ -92,10 +92,11 @@
 			<artifactId>mybatis-plus</artifactId>
 			<version>${mybatis-plus.version}</version>
 		</dependency>
+		<!-- mysql -->
 		<dependency>
-			<groupId>oracle</groupId>
-			<artifactId>ojdbc8</artifactId>
-			<version>${ojdbc.version}</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
