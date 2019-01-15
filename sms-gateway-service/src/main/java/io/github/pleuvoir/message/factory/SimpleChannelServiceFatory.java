@@ -34,8 +34,14 @@ public class SimpleChannelServiceFatory implements ChannelServiceFactory, Initia
 			logger.warn("获取短信通道失败，编号：{}", channelCode);
 			throw new ChannelException("暂无可用的短信通道");
 		}
+		
+		ChannelService channelService = this.channelServiceCache.get(channelEnum);
+		if (channelService == null) {
+			logger.warn("获取短信通道失败，编号：{}", channelCode);
+			throw new ChannelException("暂无可用的短信通道");
+		}
 		logger.info("成功获取短信通道，通道编号：{}", channelCode);
-		return this.channelServiceCache.get(channelEnum);
+		return channelService;
 	}
 
 	@Override
