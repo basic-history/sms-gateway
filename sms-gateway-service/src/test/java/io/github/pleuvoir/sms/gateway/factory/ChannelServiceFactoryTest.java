@@ -1,4 +1,4 @@
-package io.github.pleuvoir.sms.gateway.service.factory;
+package io.github.pleuvoir.sms.gateway.factory;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,7 @@ import io.github.pleuvoir.message.channel.ChannelService;
 import io.github.pleuvoir.message.exception.ChannelException;
 import io.github.pleuvoir.message.factory.ChannelServiceFactory;
 import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;
-import io.github.pleuvoir.sms.gateway.service.BaseTest;
+import io.github.pleuvoir.sms.gateway.BaseTest;
 
 public class ChannelServiceFactoryTest extends BaseTest {
 

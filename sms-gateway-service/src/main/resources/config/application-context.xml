@@ -33,14 +33,14 @@
 	    <property name="configLocation" value="classpath:config/mapping-config.xml"/>
 		<property name="mapperLocations">
 			<array>
-				<value>classpath:io/github/pleuvoir/message/dao/mapper/**/*Mapper.xml</value>
+				<value>classpath:mapper/**/*Mapper.xml</value>
 			</array>
 		</property>
 		<!-- 定义全局策略 -->
 		<property name="globalConfig">
 			<bean class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
 				<property name="idType" value="3"/>
-				<property name="dbType" value="mysql" />
+				<property name="dbType" value="oracle" />
 				<property name="dbColumnUnderline" value="true" />
 			</bean>
 		</property>

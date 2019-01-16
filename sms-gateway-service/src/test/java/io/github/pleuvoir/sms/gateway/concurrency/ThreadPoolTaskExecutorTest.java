@@ -1,4 +1,4 @@
-package io.github.pleuvoir.sms.gateway.service.concurrency;
+package io.github.pleuvoir.sms.gateway.concurrency;
 
 import java.time.LocalDate;
 
@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import io.github.pleuvoir.sms.gateway.service.BaseTest;
+import io.github.pleuvoir.sms.gateway.BaseTest;
 
 public class ThreadPoolTaskExecutorTest extends BaseTest{
 
