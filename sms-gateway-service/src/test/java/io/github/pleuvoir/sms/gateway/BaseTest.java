@@ -1,4 +1,4 @@
-package io.github.pleuvoir.sms.gateway.service;
+package io.github.pleuvoir.sms.gateway;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ActiveProfiles;

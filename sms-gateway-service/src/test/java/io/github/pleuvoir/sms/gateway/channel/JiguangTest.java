@@ -1,4 +1,4 @@
-package io.github.pleuvoir.sms.gateway.service.channel;
+package io.github.pleuvoir.sms.gateway.channel;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import io.github.pleuvoir.message.channel.jiguang.JiguangChannelService;
 import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;
-import io.github.pleuvoir.sms.gateway.service.BaseTest;
+import io.github.pleuvoir.sms.gateway.BaseTest;
 
 public class JiguangTest extends BaseTest {
 

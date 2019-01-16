@@ -24,7 +24,7 @@
 		<logback.version>1.1.7</logback.version>
 
 		<junit.version>4.12</junit.version>
-		<mysql.version>5.1.18</mysql.version>
+		<ojdbc8.version>1.0</ojdbc8.version>
 	</properties>
 
 	<dependencies>
@@ -48,11 +48,10 @@
 			<version>${druid.version}</version>
 		</dependency>
 
-		<!-- mysql -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.version}</version>
+			<groupId>oracle</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>${ojdbc8.version}</version>
 		</dependency>
 
 		<dependency>

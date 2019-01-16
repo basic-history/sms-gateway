@@ -1,4 +1,4 @@
-package io.github.pleuvoir.sms.gateway.service;
+package io.github.pleuvoir.sms.gateway;
 
 import org.junit.Test;
 
