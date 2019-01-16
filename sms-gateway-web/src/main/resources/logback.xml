@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="false" debug="false">
     <property name="APP_NAME" value="sms-gateway-web" />
-    <property name="LOG_HOME" value="${catalina.base}/logs" />
+    <property name="LOG_HOME" value="logs" />
 
 
     <contextName>${APP_NAME}</contextName>
@@ -9,8 +9,7 @@
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%-5level | %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger -
-                %msg%n
+            <pattern>%-5level | %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger -%msg%n
             </pattern>
             <charset>UTF-8</charset>
         </encoder>
@@ -22,12 +21,12 @@
         <file>${LOG_HOME}/${APP_NAME}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名 -->
-            <fileNamePattern>${LOG_HOME}/${APP_NAME}.%d{yyyy-MM-dd_HH}.log.gz
+            <fileNamePattern>${LOG_HOME}/${APP_NAME}.%d{yyyy-MM-dd}.log.gz
             </fileNamePattern>
             <maxHistory>720</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>%-5level | %d{yyyy-MM-dd HH:mm:ss.SSS} - %logger - [%thread] - %msg%n
+            <pattern>%-5level | %d{yyyy-MM-dd HH:mm:ss.SSS} - %logger - %msg%n
             </pattern>
             <charset>UTF-8</charset>
         </encoder>
@@ -44,7 +43,7 @@
         <file>${LOG_HOME}/${APP_NAME}.error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名 -->
-            <fileNamePattern>${LOG_HOME}/${APP_NAME}.error.%d{yyyy-MM-dd_HH}.log.gz
+            <fileNamePattern>${LOG_HOME}/${APP_NAME}.error.%d{yyyy-MM-dd}.log.gz
             </fileNamePattern>
             <maxHistory>720</maxHistory>
         </rollingPolicy>
@@ -63,8 +62,8 @@
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />
-        <appender-ref ref="INFO_FILE" />
-        <appender-ref ref="ERROR_FILE" />
+        <!-- <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="ERROR_FILE" />-->
     </root>
 
 

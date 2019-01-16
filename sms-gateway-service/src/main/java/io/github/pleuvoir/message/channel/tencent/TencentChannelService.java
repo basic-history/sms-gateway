@@ -1,8 +1,8 @@
 package io.github.pleuvoir.message.channel.tencent;
 
 import io.github.pleuvoir.message.channel.ChannelService;
-import io.github.pleuvoir.message.channel.ServiceChannel;
 import io.github.pleuvoir.message.enums.ChannelEnum;
+import io.github.pleuvoir.message.factory.ServiceChannel;
 import io.github.pleuvoir.message.model.dto.ChannelResultDTO;
 import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;
 import lombok.extern.slf4j.Slf4j;

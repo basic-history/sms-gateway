@@ -16,7 +16,7 @@ public class ChannelServiceFactoryTest extends BaseTest {
 
 	@Test
 	public void test() throws ChannelException {
-		ChannelService channelService = channelServiceFactory.getChannelService("1");
+		ChannelService channelService = channelServiceFactory.getChannelService("02");
 		channelService.sendSmsCode(new ChannelSmsMsgDTO());
 	}
 }

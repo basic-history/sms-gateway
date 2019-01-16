@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.channel;
+package io.github.pleuvoir.message.factory;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

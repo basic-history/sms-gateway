@@ -13,7 +13,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import io.github.pleuvoir.message.channel.ChannelService;
-import io.github.pleuvoir.message.channel.ServiceChannel;
 import io.github.pleuvoir.message.enums.ChannelEnum;
 import io.github.pleuvoir.message.exception.ChannelException;
 

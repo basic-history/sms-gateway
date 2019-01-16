@@ -60,4 +60,7 @@
 	<!-- dubbo-提供者 -->
 	<import resource="dubbo-provider.xml"/>
 	
+	<!-- 同步 http 请求 -->
+	<bean class="io.github.pleuvoir.message.util.net.SyncHttpClient" init-method="init"/>
+	
 </beans>
