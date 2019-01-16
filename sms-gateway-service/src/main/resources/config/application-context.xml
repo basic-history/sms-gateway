@@ -15,7 +15,7 @@
 	<import resource="classpath:config/profiles/prod/context-prod.xml" />
 	
 	<!-- 自动扫描 -->							
-	<context:component-scan base-package="io.github.pleuvoir">
+	<context:component-scan base-package="io.github.pleuvoir.message">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	
