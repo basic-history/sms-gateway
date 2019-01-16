@@ -1,8 +1,11 @@
 package io.github.pleuvoir.message.service;
 
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 
 import io.github.pleuvoir.message.api.SmsService;
@@ -10,6 +13,7 @@ import io.github.pleuvoir.message.channel.ChannelService;
 import io.github.pleuvoir.message.exception.ChannelException;
 import io.github.pleuvoir.message.exception.SmsException;
 import io.github.pleuvoir.message.factory.ChannelServiceFactory;
+import io.github.pleuvoir.message.model.dto.ChannelResultDTO;
 import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;
 import io.github.pleuvoir.message.model.dto.SmsCodeDTO;
 import io.github.pleuvoir.message.util.SmsExceptionTranslator;
@@ -26,6 +30,8 @@ public class DefaultSmsService implements SmsService {
 
 	private static Logger logger = LoggerFactory.getLogger(DefaultSmsService.class);
 
+	@Resource(name = "taskExecutor")
+    private ThreadPoolTaskExecutor taskExecutor;
 	@Autowired
 	private ChannelServiceFactory channelServiceFactory;
 
@@ -48,9 +54,18 @@ public class DefaultSmsService implements SmsService {
 		} catch (ChannelException e) {
 			throw SmsExceptionTranslator.convertSmsException(e);
 		}
+		
+		taskExecutor.execute(() -> {
+			// 请求通道发送信息
+			ChannelSmsMsgDTO channelSmsMsgDTO = new ChannelSmsMsgDTO();
+			ChannelResultDTO result = channelService.sendSmsCode(channelSmsMsgDTO);
 
-		ChannelSmsMsgDTO channelSmsMsgDTO = new ChannelSmsMsgDTO();
-		channelService.sendSmsCode(channelSmsMsgDTO);
+			if (result == null || !ChannelResultDTO.SUCCESS_CODE.equals(result.getCode())) {
+
+			} else {
+				
+			}
+		});
 		return null;
 	}
 

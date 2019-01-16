@@ -10,7 +10,7 @@ import io.github.pleuvoir.rabbit.autoconfigure.EnableRabbitMQPlugin;
 @Configuration
 public class GatewayConfiguration {
 
-	@Bean(name = "threadPoolTaskExecutor")
+	@Bean(name = "taskExecutor")
 	public ThreadPoolTaskExecutor getThreadPoolTaskExecutor() {
 		ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
 		threadPoolTaskExecutor.setCorePoolSize(Math.min(Runtime.getRuntime().availableProcessors() + 1, 32));
