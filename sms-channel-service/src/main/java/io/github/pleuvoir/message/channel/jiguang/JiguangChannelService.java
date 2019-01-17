@@ -5,8 +5,11 @@ import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.ObjectUtils;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
 import io.github.pleuvoir.message.channel.BaseChannelService;
@@ -36,11 +39,13 @@ public class JiguangChannelService extends BaseChannelService implements Channel
 		String base64AuthString = Base64.encode(authString.getBytes());
 		customHeader.put("Authorization", "Basic " + base64AuthString);
 
-		JSONObject param = new JSONObject();
+		JSONObject jsonObject2 = new JSONObject();
+		JSONObject jsonObject = jsonObject2;
+		JSONObject param = jsonObject;
 		param.put("mobile", channelSmsDTO.getPhone());
 		param.put("temp_id", channelSmsDTO.getTemplateCode());
 		
-		JSONObject tempParam = new JSONObject();
+		JSONObject tempParam = jsonObject;
 		tempParam.put(channelSmsDTO.getTemplateParam(), channelSmsDTO.getContent());
 		param.put("temp_para", tempParam);
 		
@@ -55,8 +60,21 @@ public class JiguangChannelService extends BaseChannelService implements Channel
 		}
 		
 		logger.info("【极光】发送短信验证码，接受到响应：{}", responseObj.getRespMsg());
-
-		return result;
+		
+		JSONObject respMsgObj = JSON.parseObject(responseObj.getRespMsg());
+		
+		if (ObjectUtils.isEmpty(respMsgObj) && StringUtils.isNotBlank(respMsgObj.getString("msg_id"))) {
+			result.setCode(ChannelResultDTO.SUCCESS_CODE);
+			result.setMsgId(respMsgObj.getString("msg_id"));
+			return result;
+		} else {
+			result.setCode(ChannelResultDTO.ERROR_CODE);
+			JSONObject errorObj = respMsgObj.getJSONObject("error");
+			if (errorObj != null) {
+				result.setMsg(errorObj.getString("message"));
+			}
+			return result;
+		}
 	}
 	
 }

@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import io.github.pleuvoir.message.channel.jiguang.JiguangChannelService;
+import io.github.pleuvoir.message.channel.model.dto.ChannelResultDTO;
 import io.github.pleuvoir.message.channel.model.dto.ChannelSmsMsgDTO;
 import io.github.pleuvoir.sms.gateway.BaseTest;
 
@@ -23,7 +24,10 @@ public class JiguangTest extends BaseTest {
 		channelSmsMsg.setContent(RandomStringUtils.randomNumeric(6));
 		channelSmsMsg.setTemplateParam("code");
 		channelSmsMsg.setSendMsgUrl("https://api.sms.jpush.cn/v1/messages");
-		jiguangChannelService.sendSmsCode(channelSmsMsg);
+		ChannelResultDTO result = jiguangChannelService.sendSmsCode(channelSmsMsg);
+		System.out.println(result.toString());
+		
+		// ChannelResultDTO(code=ERROR, msg=auth failed, msgId=null)
 	}
 
 }
