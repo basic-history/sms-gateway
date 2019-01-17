@@ -5,5 +5,5 @@ import io.github.pleuvoir.message.channel.service.ChannelService;
 
 public interface ChannelServiceFactory {
 
-	ChannelService getChannelService(String channelCode) throws ChannelServiceException;
+	ChannelService getChannelService(String channel) throws ChannelServiceException;
 }
