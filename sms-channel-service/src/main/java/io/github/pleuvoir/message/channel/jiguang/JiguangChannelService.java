@@ -10,11 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.alibaba.fastjson.JSONObject;
 
 import io.github.pleuvoir.message.channel.BaseChannelService;
-import io.github.pleuvoir.message.channel.ChannelService;
-import io.github.pleuvoir.message.enums.ChannelEnum;
+import io.github.pleuvoir.message.channel.enums.ChannelEnum;
+import io.github.pleuvoir.message.channel.model.dto.ChannelResultDTO;
+import io.github.pleuvoir.message.channel.model.dto.ChannelSmsMsgDTO;
+import io.github.pleuvoir.message.channel.service.ChannelService;
 import io.github.pleuvoir.message.factory.ServiceChannel;
-import io.github.pleuvoir.message.model.dto.ChannelResultDTO;
-import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;
 import io.github.pleuvoir.message.util.Base64;
 import io.github.pleuvoir.message.util.net.ResponseObj;
 import io.github.pleuvoir.message.util.net.SyncHttpClient;

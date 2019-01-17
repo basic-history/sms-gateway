@@ -46,6 +46,16 @@
 				<artifactId>sms-gateway-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>io.github.pleuvoir</groupId>
+				<artifactId>sms-channel-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.pleuvoir</groupId>
+				<artifactId>sms-channel-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

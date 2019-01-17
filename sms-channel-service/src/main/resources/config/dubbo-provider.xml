@@ -17,11 +17,12 @@
 	
 	<dubbo:provider delay="-1" timeout="${dubbo.provider.timeout}" retries="0"/>
 
-	<!-- 测试接口 -->
-	<dubbo:service interface="io.github.pleuvoir.message.api.TimeService" ref="timeService" version="${dubbo.server.version}"/>
 	
-	<!-- 短信接口 -->
-	<dubbo:service interface="io.github.pleuvoir.message.api.SmsService" ref="smsService" version="${dubbo.server.version}"/>
+	<!-- 短信通道 -->
+	<dubbo:service interface="io.github.pleuvoir.message.channel.api.ChannelCenterService" 
+																ref="channelCenterService" 
+																version="${dubbo.server.version}"/>
+	
 	
 
 </beans>

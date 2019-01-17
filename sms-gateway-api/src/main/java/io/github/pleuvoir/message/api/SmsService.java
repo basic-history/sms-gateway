@@ -1,7 +1,7 @@
 package io.github.pleuvoir.message.api;
 
+import io.github.pleuvoir.message.channel.model.dto.SmsCodeDTO;
 import io.github.pleuvoir.message.exception.SmsException;
-import io.github.pleuvoir.message.model.dto.SmsCodeDTO;
 
 /**
  * 短信服务
@@ -16,3 +16,4 @@ public interface SmsService {
 	String sendSmsCode(SmsCodeDTO smsCode) throws SmsException;
 
 }
+	

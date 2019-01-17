@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 import org.springframework.stereotype.Component;
 
-import io.github.pleuvoir.message.enums.ChannelEnum;
+import io.github.pleuvoir.message.channel.enums.ChannelEnum;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

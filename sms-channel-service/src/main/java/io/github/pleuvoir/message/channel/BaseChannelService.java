@@ -3,7 +3,7 @@ package io.github.pleuvoir.message.channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import io.github.pleuvoir.message.model.dto.ChannelSmsMsgDTO;
+import io.github.pleuvoir.message.channel.model.dto.ChannelSmsMsgDTO;
 
 public class BaseChannelService {
 

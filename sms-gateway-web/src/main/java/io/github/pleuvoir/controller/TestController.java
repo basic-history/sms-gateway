@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.github.pleuvoir.message.api.SmsService;
 import io.github.pleuvoir.message.api.TimeService;
+import io.github.pleuvoir.message.channel.model.dto.SendVerifyCodeDTO;
+import io.github.pleuvoir.message.channel.model.dto.SmsCodeDTO;
 import io.github.pleuvoir.message.exception.SmsException;
-import io.github.pleuvoir.message.model.dto.SendVerifyCodeDTO;
-import io.github.pleuvoir.message.model.dto.SmsCodeDTO;
 import io.github.pleuvoir.message.model.vo.ResultMessageVO;
 import io.github.pleuvoir.rabbit.model.NormalMessage;
 import io.github.pleuvoir.rabbit.producer.NormalMessageProducer;

@@ -3,7 +3,7 @@ package io.github.pleuvoir.message.util.net;
 import java.io.Serializable;
 import java.util.Map;
 
-import io.github.pleuvoir.message.common.ToJSON;
+import io.github.pleuvoir.message.channel.common.ToJSON;
 
 /**
  * 请求返回响应对象

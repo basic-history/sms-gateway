@@ -4,8 +4,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import io.github.pleuvoir.message.api.SmsService;
+import io.github.pleuvoir.message.channel.model.dto.SmsCodeDTO;
 import io.github.pleuvoir.message.exception.SmsException;
-import io.github.pleuvoir.message.model.dto.SmsCodeDTO;
 
 public class SmsServiceTest extends BaseTest {
 
