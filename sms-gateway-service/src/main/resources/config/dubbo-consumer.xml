@@ -6,16 +6,11 @@
      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
  	 http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
-	<dubbo:application name="${server.name}" />
-
-	<!-- 使用zookeeper注册中心 -->
-	<dubbo:registry protocol="zookeeper" address="${registry.address}"/>
-
 	<dubbo:consumer check="false"  />
 
-	<!-- 短信接口 -->
-	<dubbo:reference id="smsService" interface="io.github.pleuvoir.message.api.SmsService" version="${dubbo.channel.version}"/>
+	<!-- 渠道服务 -->
+	<dubbo:reference id="channelCenterService" interface="io.github.pleuvoir.message.channel.api.ChannelCenterService" 
+									version="${dubbo.channel.version}"/>
  	
 	
 </beans>

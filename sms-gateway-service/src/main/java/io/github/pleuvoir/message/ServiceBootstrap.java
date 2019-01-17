@@ -13,9 +13,9 @@ import io.github.pleuvoir.message.util.Bootstrap.Profile;
  * 启动器，第一个参数为启动环境，参考：{@link Profile}，若不设置参数按照默认的环境启动：{@link #DEFAULT_PROFILE}
  *
  */
-public class Launcher {
+public class ServiceBootstrap {
 
-	private static Logger logger = LoggerFactory.getLogger(Launcher.class);
+	private static Logger logger = LoggerFactory.getLogger(ServiceBootstrap.class);
 
 	/** 默认的启动环境：开发 */
 	public static final Profile DEFAULT_PROFILE = Profile.DEV;

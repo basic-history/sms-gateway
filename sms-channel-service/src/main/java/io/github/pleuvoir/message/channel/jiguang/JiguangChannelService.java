@@ -54,7 +54,7 @@ public class JiguangChannelService extends BaseChannelService implements Channel
 			return result;
 		}
 		
-		logger.info("【极光】发送短信验证码，接受到响应：{}", responseObj);
+		logger.info("【极光】发送短信验证码，接受到响应：{}", responseObj.getRespMsg());
 
 		return result;
 	}
