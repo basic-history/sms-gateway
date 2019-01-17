@@ -3,7 +3,7 @@ package io.github.pleuvoir.sms.gateway.service;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import io.github.pleuvoir.message.service.internal.PubParamService;
+import io.github.pleuvoir.message.service.PubParamService;
 import io.github.pleuvoir.sms.gateway.BaseTest;
 
 public class PubParamServiceTest extends BaseTest {

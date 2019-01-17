@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="io.github.pleuvoir.message.dao.pub.PubParamDao">
+
+ 	<resultMap id="params" type="io.github.pleuvoir.message.model.po.PubParamPO">
+        <result column="code" 				property="code"/>
+        <result column="name" 				property="name"/>
+        <result column="group_code" 		property="groupCode"/>
+        <result column="decimal_val" 		property="decimalVal"/>
+        <result column="int_val" 			property="intVal"/>
+        <result column="str_val" 			property="strVal"/>
+        <result column="boolean_val" 		property="booleanVal"/>
+        <result column="type" 				property="type"/>
+        <result column="modify_flag" 		property="modifyFlag"/>
+        <result column="remark" 			property="remark"/>
+    </resultMap>
+
+    <sql id="selectAll">
+            SELECT
+                code,
+                name,
+                group_code,
+                decimal_val,
+                str_val,
+                int_val,
+                boolean_val,
+                type,
+                modify_flag,
+                remark
+            FROM pub_param
+    </sql>
+
+    <select id="findByCodes" resultMap="params">
+        <include refid="selectAll"/>
+        where code in
+        <foreach collection="array" item="code" index="index" open="(" close=")" separator=",">
+            #{code}
+        </foreach>
+    </select>
+    
+    <!-- 查询动态参数表 -->
+    <select id="getParamByCode" resultMap="params">
+         <include refid="selectAll"/>
+		 WHERE code = #{code,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getStringValue" resultType="string">
+    	SELECT str_val FROM pub_param WHERE code = #{code,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getDecimalValue" resultType="java.math.BigDecimal">
+    	SELECT decimal_val FROM pub_param WHERE code = #{code,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getIntegerValue" resultType="integer">
+    	SELECT int_val FROM pub_param WHERE code = #{code,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getBooleanValue" resultType="boolean">
+    	SELECT boolean_val FROM pub_param WHERE code = #{code,jdbcType=VARCHAR}
+    </select>
+
+</mapper>

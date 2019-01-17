@@ -14,6 +14,8 @@
 	<modules>
 		<module>sms-gateway-api</module>
 		<module>sms-gateway-service</module>
+		<module>sms-channel-api</module>
+		<module>sms-channel-service</module>
 		<module>sms-gateway-web</module>
 		<module>sms-migration</module>
 	</modules>
@@ -42,6 +44,16 @@
 			<dependency>
 				<groupId>io.github.pleuvoir</groupId>
 				<artifactId>sms-gateway-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.pleuvoir</groupId>
+				<artifactId>sms-channel-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.pleuvoir</groupId>
+				<artifactId>sms-channel-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>

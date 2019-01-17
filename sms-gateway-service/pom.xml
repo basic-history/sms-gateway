@@ -40,7 +40,7 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!-- httpclient -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -49,7 +49,7 @@
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
-      				<artifactId>commons-logging</artifactId>
+					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -60,11 +60,11 @@
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
-      				<artifactId>commons-logging</artifactId>
+					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
@@ -72,7 +72,7 @@
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
-      				<artifactId>commons-logging</artifactId>
+					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -80,6 +80,11 @@
 		<dependency>
 			<groupId>io.github.pleuvoir</groupId>
 			<artifactId>sms-gateway-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.pleuvoir</groupId>
+			<artifactId>sms-channel-api</artifactId>
 		</dependency>
 
 		<dependency>
