@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.configuration;
+package io.github.pleuvoir.message.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,12 +1,12 @@
-package io.github.pleuvoir.message.gateway.service.internal.impl;
+package io.github.pleuvoir.message.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import io.github.pleuvoir.message.gateway.dao.pub.PubParamDao;
-import io.github.pleuvoir.message.gateway.model.po.PubParamPO;
-import io.github.pleuvoir.message.gateway.service.internal.PubParamService;
+import io.github.pleuvoir.message.dao.pub.PubParamDao;
+import io.github.pleuvoir.message.model.po.PubParamPO;
+import io.github.pleuvoir.message.service.PubParamService;
 
 @Service
 public class PubParamServiceImpl implements PubParamService {

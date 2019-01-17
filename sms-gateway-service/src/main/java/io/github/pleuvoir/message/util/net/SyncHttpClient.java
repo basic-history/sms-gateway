@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.util.net;
+package io.github.pleuvoir.message.util.net;
 
 import java.io.IOException;
 import java.net.URI;

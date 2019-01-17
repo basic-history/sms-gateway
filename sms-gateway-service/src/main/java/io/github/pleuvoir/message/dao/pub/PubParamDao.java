@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.dao.pub;
+package io.github.pleuvoir.message.dao.pub;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
-import io.github.pleuvoir.message.gateway.model.po.PubParamPO;
+import io.github.pleuvoir.message.model.po.PubParamPO;
 
 public interface PubParamDao extends BaseMapper<PubParamPO> {
 

@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.util;
+package io.github.pleuvoir.message.util;
 
 import java.util.ArrayList;
 import java.util.List;

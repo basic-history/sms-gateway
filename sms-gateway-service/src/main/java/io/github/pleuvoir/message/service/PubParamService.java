@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.service.internal;
+package io.github.pleuvoir.message.service;
 
 public interface PubParamService {
 

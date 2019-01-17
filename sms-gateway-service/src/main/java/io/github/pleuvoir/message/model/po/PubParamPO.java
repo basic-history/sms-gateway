@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.model.po;
+package io.github.pleuvoir.message.model.po;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

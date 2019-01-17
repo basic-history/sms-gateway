@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.util.net;
+package io.github.pleuvoir.message.util.net;
 
 /**
  * 处理异步请求结果

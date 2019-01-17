@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.fastjson.JSON;
 
-import io.github.pleuvoir.message.gateway.dao.pub.PubParamDao;
-import io.github.pleuvoir.message.gateway.model.po.PubParamPO;
+import io.github.pleuvoir.message.dao.pub.PubParamDao;
+import io.github.pleuvoir.message.model.po.PubParamPO;
 import io.github.pleuvoir.sms.gateway.BaseTest;
 
 public class PubParamDaoTest extends BaseTest{

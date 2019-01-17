@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.service;
+package io.github.pleuvoir.message.gateway;
 
 import javax.annotation.Resource;
 
@@ -15,8 +15,8 @@ import io.github.pleuvoir.message.channel.model.dto.MsgChannelDTO;
 import io.github.pleuvoir.message.channel.model.dto.SmsCodeDTO;
 import io.github.pleuvoir.message.common.RspCode;
 import io.github.pleuvoir.message.exception.SmsException;
-import io.github.pleuvoir.message.gateway.util.validator.HibernateValidatorUtils;
-import io.github.pleuvoir.message.gateway.util.validator.ValidationResult;
+import io.github.pleuvoir.message.util.validator.HibernateValidatorUtils;
+import io.github.pleuvoir.message.util.validator.ValidationResult;
 
 /**
  * 短信服务实现

@@ -1,7 +1,7 @@
-package io.github.pleuvoir.message.gateway.service;
+package io.github.pleuvoir.message.gateway;
 
 import io.github.pleuvoir.message.api.TimeService;
-import io.github.pleuvoir.message.gateway.util.DateFormat;
+import io.github.pleuvoir.message.util.DateFormat;
 import io.github.pleuvoir.redis.cache.CacheService;
 
 import java.time.LocalDateTime;

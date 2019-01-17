@@ -1,4 +1,4 @@
-package io.github.pleuvoir.message.gateway.util.validator;
+package io.github.pleuvoir.message.util.validator;
 
 import java.util.HashMap;
 import java.util.List;
