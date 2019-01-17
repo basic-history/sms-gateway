@@ -45,7 +45,7 @@ public class SmsServiceImpl implements SmsService {
 
 		// from db
 		// String channelCode = ChannelEnum.JIGUANG.getCode();
-		String channelCode = "1";
+		String channelCode = "02";
 		
 		MsgChannelDTO msgChannelDTO = new MsgChannelDTO();
 		msgChannelDTO.setChannelCode(channelCode);

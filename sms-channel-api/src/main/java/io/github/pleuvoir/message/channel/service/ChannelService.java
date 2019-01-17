@@ -1,6 +1,5 @@
 package io.github.pleuvoir.message.channel.service;
 
-import io.github.pleuvoir.message.channel.exception.ChannelServiceException;
 import io.github.pleuvoir.message.channel.model.dto.ChannelResultDTO;
 import io.github.pleuvoir.message.channel.model.dto.ChannelSmsMsgDTO;
 

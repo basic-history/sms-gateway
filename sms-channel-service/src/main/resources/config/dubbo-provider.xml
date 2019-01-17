@@ -8,7 +8,9 @@
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd" default-lazy-init="true">
 
 	<!-- 提供方应用信息，用于计算依赖关系 -->
-	<dubbo:application name="${dubbo.server.name}" />
+	<dubbo:application name="${dubbo.server.name}"> 
+		<dubbo:parameter key="qos.enable" value="false"/>
+	</dubbo:application>
 
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
