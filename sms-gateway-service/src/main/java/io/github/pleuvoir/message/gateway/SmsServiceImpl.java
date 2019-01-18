@@ -55,7 +55,7 @@ public class SmsServiceImpl implements SmsService {
 		} catch (ChannelServiceException e) {
 			LOGGER.error("渠道异常，请求参数信息：{}， 失败原因:{}", smsCodeDTO.toJSON(), e.getMessage());
 		} catch (Exception e) {
-			LOGGER.error("渠道异常，请求参数信息：{}， 失败原因:{}", smsCodeDTO.toJSON(), e.getMessage());
+			LOGGER.error("渠道异常，请求参数信息：{}， 失败原因:{}", smsCodeDTO.toJSON(), e);
 			throw new SmsException(RspCode.ERROR);
 		}
 

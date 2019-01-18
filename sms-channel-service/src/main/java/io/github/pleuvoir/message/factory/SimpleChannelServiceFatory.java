@@ -17,7 +17,7 @@ import io.github.pleuvoir.message.channel.exception.ChannelServiceException;
 import io.github.pleuvoir.message.channel.factory.ChannelServiceFactory;
 import io.github.pleuvoir.message.channel.service.ChannelService;
 
-@Service
+@Service("simpleChannelServiceFatory")
 public class SimpleChannelServiceFatory implements ChannelServiceFactory, InitializingBean {
 
 	private static Logger logger = LoggerFactory.getLogger(SimpleChannelServiceFatory.class);
@@ -61,7 +61,7 @@ public class SimpleChannelServiceFatory implements ChannelServiceFactory, Initia
 			}
 		});
 		
-		logger.info("短信通道工厂初始化完成，目前已实现通道：{}", Arrays.asList(this.channelServiceCache.keySet().toArray()));
+		logger.info("简单短信通道工厂初始化完成，目前已实现通道：{}", Arrays.asList(this.channelServiceCache.keySet().toArray()));
 	}
 
 }

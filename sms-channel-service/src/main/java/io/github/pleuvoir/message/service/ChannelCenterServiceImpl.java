@@ -20,19 +20,19 @@ import io.github.pleuvoir.message.channel.model.dto.SmsCodeDTO;
 import io.github.pleuvoir.message.channel.service.ChannelService;
 
 /**
- * 短信服务实现
+ * 短信通道中心
  * @author pleuvoir
  *
  */
 @Service("channelCenterService")
-public class ChannelCenterServiceProvider implements ChannelCenterService {
+public class ChannelCenterServiceImpl implements ChannelCenterService {
 
-	private static Logger logger = LoggerFactory.getLogger(ChannelCenterServiceProvider.class);
+	private static Logger logger = LoggerFactory.getLogger(ChannelCenterServiceImpl.class);
 
 	@Resource(name = "taskExecutor")
 	private ThreadPoolTaskExecutor taskExecutor;
 
-	@Autowired
+	@Resource(name = "simpleChannelServiceFatory")
 	private ChannelServiceFactory channelServiceFactory;
 
 
