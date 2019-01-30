@@ -1,13 +1,12 @@
 package io.github.pleuvoir.message.model.po;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
-
 import lombok.Data;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 @Data
 @TableName("pub_param")
@@ -45,7 +44,4 @@ public class PubParamPO implements Serializable {
     @TableField("remark")
 	private String remark;			//描述
 
-	/** 短信缓存时间(单位分钟)(接口) */
-	public static final String CODE_SMS_CACAHE_TIME = "1003";
-	
 }
